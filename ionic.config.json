@@ -1,5 +1,7 @@
 {
   "name": "stroke-recognition-ionic",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
