@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PhotoService } from '../services/photo.service';
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +8,17 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  photo;
+
+  constructor(public photoService: PhotoService) {}
+
+  capturePhoto = () => {
+    this.photoService.takePicture().then(imageData => {
+      this.photo = 'data:image/jpeg;base64,' + imageData;
+      console.log('Photo Captured:', this.photo);
+    }, (err) => {
+      console.log("Camera issue: " + err);
+    })
+  }
 
 }
