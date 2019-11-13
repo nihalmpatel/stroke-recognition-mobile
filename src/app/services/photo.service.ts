@@ -12,6 +12,9 @@ export class PhotoService {
   takePicture(sourceType) {
     const options: CameraOptions = {
       quality: 100,
+      cameraDirection: 1,
+      allowEdit: true,
+      correctOrientation: true,
       sourceType: (sourceType == "camera" ? this.camera.PictureSourceType.CAMERA : this.camera.PictureSourceType.PHOTOLIBRARY),
       destinationType: this.camera.DestinationType.DATA_URL,
       encodingType: this.camera.EncodingType.JPEG,
