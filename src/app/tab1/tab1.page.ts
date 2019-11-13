@@ -12,8 +12,8 @@ export class Tab1Page {
 
   constructor(public photoService: PhotoService) {}
 
-  capturePhoto = () => {
-    this.photoService.takePicture().then(imageData => {
+  capturePhoto = (sourceType) => {
+    this.photoService.takePicture(sourceType).then(imageData => {
       this.photo = 'data:image/jpeg;base64,' + imageData;
       console.log('Photo Captured:', this.photo);
     }, (err) => {
