@@ -7,13 +7,24 @@
 </ion-header>
 
 <ion-content fullscreen>
-  <ion-card *ngIf="photo">
-    <img src="{{photo}}" style="height: 400px; object-fit: contain;"/>
+  <ion-card *ngIf="!photo">
+    <img src="assets/img/default-img.png" />
     <ion-card-header>
-      <ion-card-title>Test Result</ion-card-title>
+      <ion-card-title>Result</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <span>Your chances of having stroke is: {{result | number : '1.2-2' }} %</span>
+      <span>Your result will appear here once you capture or select image from the gallery.</span>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="photo">
+    <img src="{{photo}}" style="height: 400px; object-fit: contain;" />
+    <ion-card-header>
+      <ion-card-title>Result</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <span *ngIf="result">Your chances of having stroke is:  {{result | number : '1.2-2' }} %</span>
+      <ion-spinner *ngIf="!result" name="dots"></ion-spinner>
     </ion-card-content>
   </ion-card>
 
@@ -33,5 +44,5 @@
       </ion-row>
     </ion-grid>
   </ion-fab>
-  
+
 </ion-content>

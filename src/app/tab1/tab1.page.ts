@@ -24,7 +24,7 @@ export class Tab1Page {
 
   capturePhoto = (sourceType) => {
     this.photoService.takePicture(sourceType).then(imageData => {
-
+      this.result = "";
       console.log(imageData);
 
       this.photo = 'data:image/jpeg;base64,' + imageData;
