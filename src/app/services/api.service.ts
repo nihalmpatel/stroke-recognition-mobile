@@ -12,6 +12,6 @@ export class ApiService {
   predictStroke(body) {
     let headers = new HttpHeaders();
     headers.append('Content-Type','application/json');
-    return this.http.post(environment.apiURL + '/stroke/predictSentiment', body, { headers: headers });
+    return this.http.post(environment.apiURL + '/stroke/predict', body, { headers: headers });
   }
 }
