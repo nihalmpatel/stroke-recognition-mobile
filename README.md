@@ -1,21 +1,18 @@
-## Stroke Recognition Cross-Platform Mobile App (Android & iOS)
-Ionic Mobile App for Software Engineering Group Project - COMP - 8117 - University of Windsor
+
+## Stroke Recognition Platform
+
+> Software Engineering Group Project - COMP - 8117 - University of Windsor
 
 
-### To run this app locally follow:
+This project focuses on predicting the chances of having stroke from facial data by utilizing **CNN** (Convolutional Neural Network). 
 
+The project is structured in two modules:
 
-#### 1. Clone the repo:
-```
-git clone https://github.com/nihalmpatel/stroke-recognition-mobile.git
-```
+ 1. Frontend: Cross platfrom mobile applications (Android & iOS) powered by Ionic 4
+ 2. Backend: Django backend consists of the REST APIs and Machine Learning Model integration to process image and provide prediction result
 
-#### 2. Install dependencies:
-```
-npm install
-```
+**Project Architecture:**
 
-#### 3. Browse the app
-```
-ionic serve
-```
+![Architecture](https://nihalpatel.com/images/project/stroke-rec-arch.jpg)
+
+![Flow Diagram](https://nihalpatel.com/images/project/stroke-rec-diagram.png)
